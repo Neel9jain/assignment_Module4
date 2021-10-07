@@ -45,7 +45,7 @@ Filtered_Data <- Full_Data[,filtered_names]
 
 
 ## 3.Uses descriptive activity names to name the activities in the data set
-Activity_names <- read.table("UCIHARDataset/activity_labels.txt",header =FALSE)
+Activity_names <- read.table("UCI\ HAR\ Dataset/activity_labels.txt",header =FALSE)
 Filtered_Data$Activity <- Activity_names$V2[match(Filtered_Data$Activity, Activity_names$V1)]
 
 ## write.csv(Filtered_Data,"Filtered_Data.csv") ## Extracting the Data in CSV for Checking 
