@@ -70,6 +70,7 @@ tidy_data <- Filtered_Data %>%
 
 write.csv(tidy_data,"tidy_data.csv")  ## Extracting the Data in CSV for Checking
 
+write.table(tidy_data,"tidy_data.txt",row.name=FALSE)
 
 
 
