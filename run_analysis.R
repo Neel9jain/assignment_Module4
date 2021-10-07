@@ -1,27 +1,27 @@
 
 
 ## Reading the Test Data
-X_test  <- read.table("UCIHARDataset/test/X_test.txt",header =FALSE)
+X_test  <- read.table("UCI\ HAR\ Dataset/test/X_test.txt",header =FALSE)
 
-colname <- read.table("UCIHARDataset/features.txt",header = FALSE)
+colname <- read.table("UCI\ HAR\ Dataset/features.txt",header = FALSE)
 names(X_test) <- colname[,2]
 
-Y_test <- read.table("UCIHARDataset/test/y_test.txt",header =FALSE)
+Y_test <- read.table("UCI\ HAR\ Dataset/test/y_test.txt",header =FALSE)
 names(Y_test) <- "Activity"
 
-subject_test <- read.table("UCIHARDataset/test/subject_test.txt",header =FALSE)
+subject_test <- read.table("UCI\ HAR\ Dataset/test/subject_test.txt",header =FALSE)
 names(subject_test) <- "Subject_Id"
 
 Test_data <- cbind(subject_test,Y_test,X_test)
 
 # Reading the Training Data
-X_train <- read.table("UCIHARDataset/train/X_train.txt",header =FALSE)
+X_train <- read.table("UCI\ HAR\ Dataset/train/X_train.txt",header =FALSE)
 names(X_train) <- colname[,2]
 
-Y_train <- read.table("UCIHARDataset/train/y_train.txt",header =FALSE)
+Y_train <- read.table("UCI\ HAR\ Dataset/train/y_train.txt",header =FALSE)
 names(Y_train) <- "Activity"
 
-subject_train <- read.table("UCIHARDataset/train/subject_train.txt",header =FALSE)
+subject_train <- read.table("UCI\ HAR\ Dataset/train/subject_train.txt",header =FALSE)
 names(subject_train) <- "Subject_Id"
 
 Train_data <- cbind(subject_train,Y_train,X_train)
